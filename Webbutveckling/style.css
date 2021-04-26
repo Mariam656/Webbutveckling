@@ -1,0 +1,43 @@
+body{
+    background-image: url(https://cdna.artstation.com/p/assets/images/images/024/581/982/medium/goran-pesic-artstation-bg1.jpg?1582878373);
+    background-size: cover;
+}
+
+.container1{
+    background: #5d2c22;
+    width: 50%;
+    margin: 0 auto;
+    margin-top: 120px;
+    border-width: 2px;
+    border-style: solid;
+    border-color: #b7b066;
+}
+
+.container1 h1{
+    color:  #b7b066;
+    font-size: 70px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left: 80px;
+}
+
+.container2{
+    background: #5d2c22;
+    height: 120px;
+    margin-top: 10px;
+}
+.container2{
+    color:#b7b066;
+    border-width: 2px;
+    border-style: solid;
+    height: 100px;
+    width: 500px;
+    margin-left: 383px;
+}
+
+.container2 a{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 65px;
+    margin-left: 118px;
+    color: #c14629;
+    text-decoration: none;
+}
