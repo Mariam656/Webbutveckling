@@ -9,12 +9,12 @@
 </head>
 <body>
     <script src="http://spelprogrammering.nu/simple.js">
-        
+
         var zombies = [];
 
         var i =0;
 
-        while (i < 20)
+        while (i < 2)
         {
             zombies.push({x: random(totalWidth), y: random(totalHeight), speed: random(1,5)});
             i += 1;
@@ -26,12 +26,22 @@
         {
             clearScreen();
 
+            if (keyboard.b)
+            var spel = prompt("vill du forstätta spela")
+            if (spel === "ja", "Ja") {
+                break;
+            }
+            else
+                alert("Game end")
+            
+            picture(mouse.x, mouse.y, "rsz_hd_sunflower.png")
+
             var i= 0;
 
-            while(i < 20)
+            while(i < 2)
             {
                 var zombie = zombies[i];
-                picture(zombie.x, zombie.y, "https://dejpknyizje2n.cloudfront.net/marketplace/products/bloodless-cartoon-zombie-sticker-1541195453.8643174.png");
+                picture(zombie.x, zombie.y, "rsz_114218be114b24384cfba8cba93168461.png");
 
                 if (zombie.x < mouse.x)
                     zombie.x += zombie.speed;
@@ -45,8 +55,8 @@
 
                 if (distance(mouse, zombie) < 5)
                 {
-                alert("Game over");
-                stopUpdate();
+                    text(300, 300, 80, "Game over!", "red")
+                    stopUpdate();
                 }
 
                 i += 1;
