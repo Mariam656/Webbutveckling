@@ -10,33 +10,37 @@
 <body>
     <script src="http://spelprogrammering.nu/simple.js">
 
-        var zombies = [];
+        var zombies = []; // Skapar en tom lista som heter zombies
 
-        var i =0;
+        var i = 0; // skapar en variabel som ahr värdet 0
 
-        while (i < 2)
+        while (i < 2) // Dessa kod bestämmer hur många zombies v vill ha i spelet. Så länge i är mindre än atnalet zombies vi vill ha så kommer koden nedan köras.
         {
-            zombies.push({x: random(totalWidth), y: random(totalHeight), speed: random(1,5)});
-            i += 1;
+            zombies.push({x: random(totalWidth), y: random(totalHeight), speed: random(1,5)}); // Man väljer ett random värde på vart zombieserna på x och y axeln ska hammna, och en random hastighet mellan 1 till 5 
+            i += 1; 
         }
 
         var zombie = {x: random(totalWidth), y: random(totalHeight), speed: random(1,5)};
 
         function update()
         {
-            clearScreen();
+            clearScreen(); // Renar skärmen när zombieserna rör på sig 
 
-            if (keyboard.b)
-            var spel = prompt("vill du forstätta spela")
-            if (spel === "ja", "Ja") {
-                break;
+            if (keyboard.space){ // om man trycke på spacebar
+            var spel = prompt("vill du forstätta spela") // spelet kommer fråga "vill du forstätta spela"
+                if (spel === "ja", "Ja") { // om man svarar ja 
+                 ;
             }
-            else
-                alert("Game end")
-            
-            picture(mouse.x, mouse.y, "rsz_hd_sunflower.png")
+            else{// om man svarar något annat 
+                text(300, 300, 80, "Game over!", "red") // spelet kommer skriva ut Game over 
+                stopUpdate(); // och koden kommer sluta köras
+            }
 
-            var i= 0;
+        }
+    
+            picture(mouse.x, mouse.y, "rsz_hd_sunflower.png") // ändrar bild på musen
+
+            var i= 0; 
 
             while(i < 2)
             {
@@ -53,10 +57,10 @@
                 else
                     zombie.y -= zombie.speed;
 
-                if (distance(mouse, zombie) < 5)
+                if (distance(mouse, zombie) < 5) // om avståndet mellan mus och zombie blir mindre än 5
                 {
-                    text(300, 300, 80, "Game over!", "red")
-                    stopUpdate();
+                    text(300, 300, 80, "Game over!", "red")// spelet komemr skriva ut "Game over"
+                    stopUpdate(); // och koden kommer sluta köras
                 }
 
                 i += 1;
