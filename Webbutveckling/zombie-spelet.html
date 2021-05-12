@@ -12,9 +12,9 @@
 
         var zombies = []; // Skapar en tom lista som heter zombies
 
-        var i = 0; // skapar en variabel som ahr värdet 0
+        var i = 0; // skapar en variabel som har värdet 0
 
-        while (i < 2) // Dessa kod bestämmer hur många zombies v vill ha i spelet. Så länge i är mindre än atnalet zombies vi vill ha så kommer koden nedan köras.
+        while (i < 10) // Dessa kod bestämmer hur många zombies man vill ha i spelet. Så länge i är mindre än antalet zombies så kommer koden nedan köras.
         {
             zombies.push({x: random(totalWidth), y: random(totalHeight), speed: random(1,5)}); // Man väljer ett random värde på vart zombieserna på x och y axeln ska hammna, och en random hastighet mellan 1 till 5 
             i += 1; 
@@ -27,22 +27,22 @@
             clearScreen(); // Renar skärmen när zombieserna rör på sig 
 
             if (keyboard.space){ // om man trycke på spacebar
-            var spel = prompt("vill du forstätta spela") // spelet kommer fråga "vill du forstätta spela"
-                if (spel === "ja", "Ja") { // om man svarar ja 
-                 ;
+            var spel = prompt("Pausat, vill du forstätta spela") // spelet kommer fråga "vill du forstätta spela"
+                if (spel == "ja") { // om man svarar ja 
+                break; // if satsen slutar att köras och spelet/koden fortsätter 
             }
             else{// om man svarar något annat 
                 text(300, 300, 80, "Game over!", "red") // spelet kommer skriva ut Game over 
                 stopUpdate(); // och koden kommer sluta köras
+        
             }
-
-        }
+        } 
     
             picture(mouse.x, mouse.y, "rsz_hd_sunflower.png") // ändrar bild på musen
 
-            var i= 0; 
+            var i = 0; 
 
-            while(i < 2)
+            while(i < 10)
             {
                 var zombie = zombies[i];
                 picture(zombie.x, zombie.y, "rsz_114218be114b24384cfba8cba93168461.png");
