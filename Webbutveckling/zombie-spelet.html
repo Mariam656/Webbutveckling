@@ -29,7 +29,7 @@
             if (keyboard.space){ // om man trycke på spacebar
             var spel = prompt("Pausat, vill du forstätta spela") // spelet kommer fråga "vill du forstätta spela"
                 if (spel == "ja") { // om man svarar ja 
-                break; // if satsen slutar att köras och spelet/koden fortsätter 
+                ; // (break) if satsen slutar att köras och spelet/koden fortsätter då break stoppar if satsen (men break funkar inte här och herman så att jag kan låta den vara så, då jag har tänkt rätt )
             }
             else{// om man svarar något annat 
                 text(300, 300, 80, "Game over!", "red") // spelet kommer skriva ut Game over 
